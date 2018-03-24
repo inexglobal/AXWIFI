@@ -5,7 +5,7 @@ Arduino Library for AXWiFi
 
 ## How to use:
 
-1. Download the source from the git https://github.com/Teerawut101/AXWiFi
+1. Download the source from the git https://github.com/inexglobal/AXWiFi
 
 2. copy the AXWiFi folder to your arduino default library. Your Arduino library folder should now look like this  
    (on Windows): [arduino installation directory]
