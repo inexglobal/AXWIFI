@@ -1,0 +1,18 @@
+AXWIFI 	KEYWORD3
+AX		KEYWORD3
+ax		KEYWORD3
+
+////////////////////////SLED
+Sled	KEYWORD1
+SledShow	KEYWORD3
+SledTypeGRB	KEYWORD3
+SledTypeRGB	KEYWORD3
+////////////////////////OLED
+Oled	KEYWORD1
+OledShow	KEYWORD3
+OledSetTextSize	KEYWORD3
+OledSetText	KEYWORD3
+
+////////////////////////core
+begin	KEYWORD1
+clear	KEYWORD1
