@@ -16,6 +16,7 @@ void AXWIFI::begin() {
     __size=1;
     Oled.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // initialize with the I2C addr 0x3D (for the 128x64)
     Oled.clearDisplay();   // Clear the buffer.
+    Oled.display();
     Oled.setTextSize(1);
     Oled.setTextColor(WHITE,BLACK);
     Oled.setCursor(0,0);
