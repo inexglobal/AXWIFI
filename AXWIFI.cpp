@@ -4,15 +4,10 @@
 #include "AXWIFI.h"
 
 void AXWIFI::begin() {
-    Serial.begin(115200);
-    Serial.flush();
-    Serial.println("\nAXWIFI initializing...");
-    pinMode(_PINSLEDs,OUTPUT);
-    sleds.begin(); // This initializes the NeoPixel library.
-    for(int i=0;i<_NUMSLEDs;i++){
-     sleds.setPixelColor(i,sleds.Color(0, 0, 0)); //Adjust brightness, Color red 
-    }
-    sleds.show(); // Initialize all SLEDs to 'off'
+    //Serial.begin(115200);
+    //Serial.flush();
+    //Serial.println("\nAXWIFI initializing...");
+
     __size=1;
     Oled.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // initialize with the I2C addr 0x3D (for the 128x64)
     Oled.clearDisplay();   // Clear the buffer.
@@ -20,6 +15,15 @@ void AXWIFI::begin() {
     Oled.setTextSize(1);
     Oled.setTextColor(WHITE,BLACK);
     Oled.setCursor(0,0);
+    pinMode(_PINSLEDs,OUTPUT);
+    sleds.begin(); // This initializes the NeoPixel library.
+    for(int i=0;i<_NUMSLEDs;i++){
+     sleds.setPixelColor(i,sleds.Color(0, 0, 0)); //Adjust brightness, Color red 
+    }
+    sleds.show(); // Initialize all SLEDs to 'off'
+	for(int i=0;i<_NUMSLEDs;i++){
+     AX.SledShow(i,0, 0, 0); //Adjust brightness, Color red 
+    }
 }
 void AXWIFI::clear() {
     AX.begin();
