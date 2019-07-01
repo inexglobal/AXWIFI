@@ -14,8 +14,9 @@ class AXWIFI  {
     Adafruit_NeoPixel Sled = Adafruit_NeoPixel(_NUMSLEDs,_PINSLEDs, NEO_GRB + NEO_KHZ800);
     Adafruit_SSD1306 Oled = Adafruit_SSD1306(-1);
     void begin(void),
-		 clear(void),
+	 clear(void),
          beep(void),
+	 sound(uint16_t freq,uint32_t time),
          SledTypeGRB(void),
          SledTypeRGB(void),
          SledShow(uint16_t n, uint8_t r, uint8_t g, uint8_t b),
