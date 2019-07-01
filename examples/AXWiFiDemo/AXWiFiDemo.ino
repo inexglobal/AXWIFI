@@ -18,6 +18,6 @@ void loop() {
   ax.OledSetText(2,1,"Pi=%.3f",3.141);
   ax.OledShow();
   if(!digitalRead(D3)){
-    ax.beep();
+    ax.sound(700,250);
   }
 }
