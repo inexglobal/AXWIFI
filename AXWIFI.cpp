@@ -36,6 +36,12 @@ void AXWIFI::beep() {
     analogWrite(15,0);
     //tone(15,2000,250);
 }
+void AXWIFI::sound(uint16_t freq,uint32_t time){
+	analogWriteFreq(freq);
+    analogWrite(15,255);
+    delay(time);
+    analogWrite(15,0);
+}
 void AXWIFI::SledTypeGRB() {
     sleds.updateType(NEO_GRB + NEO_KHZ800);  
 }
